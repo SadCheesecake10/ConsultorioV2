@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace ConsultorioV2
 {
     /// <summary>
-    /// Interaction logic for Inicio.xaml
+    /// Interaction logic for Citas.xaml
     /// </summary>
-    public partial class Inicio : Page
+    public partial class Citas : Page
     {
-        public Inicio()
+        public Citas()
         {
             InitializeComponent();
         }

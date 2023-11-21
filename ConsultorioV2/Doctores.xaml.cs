@@ -18,9 +18,9 @@ namespace ConsultorioV2
     /// <summary>
     /// Interaction logic for Inicio.xaml
     /// </summary>
-    public partial class Inicio : Page
+    public partial class Doctores : Page
     {
-        public Inicio()
+        public Doctores()
         {
             InitializeComponent();
         }

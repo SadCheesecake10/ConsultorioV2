@@ -9,6 +9,8 @@
       Title="Inicio">
 
     <Grid Background="White">
-        
+        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="BIENVENIDO" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="72"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Citas de hoy:" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Width="290" FontSize="48"/>
+        <Calendar x:Name="CalendarioCitas" VerticalAlignment="Stretch" Margin="0,219,0,10" Width="NaN"/>
     </Grid>
 </Page>

@@ -43,6 +43,28 @@ namespace ConsultorioV2
             }
         }
 
+        private void TextBlock_Click(object sender, MouseButtonEventArgs e)
+        {
+            if (sender is TextBlock txtNombre)
+            {
+                switch (txtNombre.Name)
+                {
+                    case "txt_Inicio":
+                        Rec_Pagina.NavigationService.Navigate(new Uri("Inicio.xaml", UriKind.Relative));
+                        break;
+                    case "txt_Pacientes":
+                        Rec_Pagina.NavigationService.Navigate(new Uri("Pacientes.xaml", UriKind.Relative));
+                        break;
+                    case "txt_Doctores":
+                        Rec_Pagina.NavigationService.Navigate(new Uri("Doctores.xaml", UriKind.Relative));
+                        break;
+                    case "txt_Citas":
+                        Rec_Pagina.NavigationService.Navigate(new Uri("Citas.xaml", UriKind.Relative));
+                        break;
+                }
+            }
+        }
+
         private void Color_Rectangulos(TextBlock txtNombre, Color color)
         {
             switch (txtNombre.Name)
