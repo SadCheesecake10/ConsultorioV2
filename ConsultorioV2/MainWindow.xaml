@@ -5,11 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConsultorioV2"
         mc:Ignorable="d"
-        Title="MainWindow" Height="497" Width="1037">
+        Title="Clinica" Height="497" Width="935" Icon="Imagenes/clinic.ico">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <Viewbox Stretch="Uniform" Grid.Column="0">
             <Grid>
@@ -45,8 +45,8 @@
                 </Rectangle>
             </Grid>
         </Viewbox>
-        
-        <Viewbox Stretch="Uniform" Grid.Column="1">
+
+        <Viewbox Stretch="Uniform" Margin="4,0,1,0" Grid.Column="1">
             <Grid>
                 <!-- Frame columna derecha -->
                 <Frame x:Name="Rec_Pagina" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>

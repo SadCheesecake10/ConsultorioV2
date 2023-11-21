@@ -6,11 +6,12 @@
       xmlns:local="clr-namespace:ConsultorioV2"
       mc:Ignorable="d" 
       d:DesignHeight="481" d:DesignWidth="793"
-      Title="Inicio">
+      Title="Inicio" Loaded="Page_Loaded">
 
     <Grid Background="White">
-        <TextBlock HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="BIENVENIDO" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="72"/>
-        <TextBlock HorizontalAlignment="Left" Margin="10,111,0,0" TextWrapping="Wrap" Text="Citas de hoy:" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Width="290" FontSize="48"/>
-        <Calendar x:Name="CalendarioCitas" VerticalAlignment="Stretch" Margin="0,219,0,10" Width="NaN"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="BIENVENIDO" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="72" TextAlignment="Center" Width="793"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="Wrap" Text="Citas de hoy:" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Width="792" FontSize="48"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="10,165,10,94"/>
+        <TextBox x:Name="Reloj" HorizontalAlignment="Left" Margin="21,442,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="762" FontFamily="Segoe UI Variable Display" FontSize="20" BorderBrush="{x:Null}" Background="{x:Null}" TextAlignment="Right" SelectionBrush="{x:Null}" Cursor="AppStarting"/>
     </Grid>
 </Page>
