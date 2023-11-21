@@ -29,6 +29,7 @@ namespace ConsultorioV2
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
         {
+            Mouse.OverrideCursor = Cursors.Hand;
             if (sender is TextBlock txtNombre)
             {
                 Color_Rectangulos(txtNombre, Color.FromRgb(0, 200, 200));
@@ -37,6 +38,7 @@ namespace ConsultorioV2
 
         private void TextBlock_MouseLeave(object sender, MouseEventArgs e)
         {
+            Mouse.OverrideCursor = null;
             if (sender is TextBlock txtNombre)
             {
                 Color_Rectangulos(txtNombre, Color.FromRgb(0, 150, 200));

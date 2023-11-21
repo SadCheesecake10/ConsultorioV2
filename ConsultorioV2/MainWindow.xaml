@@ -7,40 +7,50 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="497" Width="1037">
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <Rectangle HorizontalAlignment="Left" Height="481" VerticalAlignment="Center" Width="244" Fill="#FF0096C8"/>
-        <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,103,0,0"/>
-        <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,111,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-        <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,164,0,0"/>
-        <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,167,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-        <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Left" Height="58" Margin="0,218,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
-        <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,224,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-        <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Left" Height="58" Margin="0,282,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
-        <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,288,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-        <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,169,0,0" VerticalAlignment="Top" Width="47">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Imagenes/user-injured.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,222,0,0" VerticalAlignment="Top" Width="49">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Imagenes/user-md.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,286,0,0" VerticalAlignment="Top" Width="49">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Imagenes/calendar-day.png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-        <Frame x:Name="Rec_Pagina" HorizontalAlignment="Left" Height="481" Width="793" Margin="244,0,0,0" VerticalAlignment="Center" NavigationUIVisibility="Hidden"/>
-        <Rectangle HorizontalAlignment="Left" Height="47" Margin="11,109,0,0" VerticalAlignment="Top" Width="47">
-            <Rectangle.Fill>
-                <ImageBrush ImageSource="Imagenes/house-medical (1).png"/>
-            </Rectangle.Fill>
-        </Rectangle>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Viewbox Stretch="Uniform" Grid.Column="0">
+            <Grid>
+                <!-- Elementos columna izquierda -->
+                <Rectangle HorizontalAlignment="Left" Height="481" VerticalAlignment="Center" Width="244" Fill="#FF0096C8"/>
+                <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,103,0,0"/>
+                <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,111,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,164,0,0"/>
+                <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,167,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Left" Height="58" Margin="0,218,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
+                <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,224,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Left" Height="58" Margin="0,282,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
+                <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,288,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,169,0,0" VerticalAlignment="Top" Width="47">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Imagenes/user-injured.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,222,0,0" VerticalAlignment="Top" Width="49">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Imagenes/user-md.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,286,0,0" VerticalAlignment="Top" Width="49">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Imagenes/calendar-day.png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="11,109,0,0" VerticalAlignment="Top" Width="47">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="Imagenes/house-medical (1).png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+            </Grid>
+        </Viewbox>
+        
+        <Viewbox Stretch="Uniform" Grid.Column="1">
+            <Grid>
+                <!-- Frame columna derecha -->
+                <Frame x:Name="Rec_Pagina" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+            </Grid>
+        </Viewbox>
     </Grid>
 </Window>
