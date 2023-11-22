@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConsultorioV2"
         mc:Ignorable="d"
-        Title="Clinica" Height="497" Width="935" Icon="Imagenes/clinic.ico">
+        Title="Clinica" Height="497" Width="935" Icon="Imagenes/clinic.ico" Loaded="Window_Loaded">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -49,7 +49,8 @@
         <Viewbox Stretch="Uniform" Margin="4,0,1,0" Grid.Column="1">
             <Grid>
                 <!-- Frame columna derecha -->
-                <Frame x:Name="Rec_Pagina" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+                <TextBlock x:Name="Reloj" HorizontalAlignment="Center" Margin="0,458,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="762" FontFamily="Segoe UI Variable Display" FontSize="20" Background="{x:Null}" TextAlignment="Right" Cursor="AppStarting"/>
+                <Frame x:Name="Rec_Pagina" NavigationUIVisibility="Hidden" Margin="0,-23,0,-21"/>
             </Grid>
         </Viewbox>
     </Grid>

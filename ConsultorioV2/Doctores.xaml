@@ -6,9 +6,12 @@
       xmlns:local="clr-namespace:ConsultorioV2"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800" 
-      Title="Doctores">
+      Title="Doctores" Loaded="Page_Loaded">
 
-    <Grid>
-        
+    <Grid Background="white">
+        <TextBlock HorizontalAlignment="Center" Margin="0,4,0,0" TextWrapping="Wrap" Text="Agenda de doctores" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="72" TextAlignment="Center" Width="792"/>
+        <TextBlock x:Name="Reloj" HorizontalAlignment="Center" Margin="0,458,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="762" FontFamily="Segoe UI Variable Display" FontSize="20" Background="{x:Null}" TextAlignment="Right" Cursor="AppStarting"/>
+        <DataGrid d:ItemsSource="{d:SampleData ItemCount=5}" Margin="54,145,50,71"/>
+        <TextBox HorizontalAlignment="Left" Margin="76,103,0,0" TextWrapping="Wrap" Text="Buscar..." VerticalAlignment="Top" Width="653" Height="33" FontFamily="Yu Gothic UI" FontSize="20" SelectionOpacity="0.5"/>
     </Grid>
 </Page>

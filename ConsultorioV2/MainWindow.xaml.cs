@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace ConsultorioV2
 {
@@ -84,6 +85,20 @@ namespace ConsultorioV2
                     Rec_Citas.Fill = new SolidColorBrush(color);
                     break;
             }
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(1);
+            timer.Tick += Timer_Tick;
+            timer.Start();
+            Reloj.Text = DateTime.Now.ToLongDateString();
+        }
+
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            Reloj.Text = DateTime.Now.ToLongDateString();
         }
     }
 }
