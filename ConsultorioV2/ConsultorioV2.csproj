@@ -188,6 +188,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <Resource Include="Fonts\Raleway-Black.ttf" />
+    <Resource Include="Fonts\Raleway-Bold.ttf" />
+    <Resource Include="Fonts\Raleway-ExtraBold.ttf" />
+    <Resource Include="Fonts\Raleway-Medium.ttf" />
+    <Resource Include="Fonts\Raleway-Regular.ttf" />
+    <Resource Include="Fonts\Raleway-SemiBold.ttf" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -214,6 +220,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Estilos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Fonts/Raleway-Black.ttf"/>
+    <Resource Include="Fonts/Raleway-Bold.ttf"/>
+    <Resource Include="Fonts/Raleway-ExtraBold.ttf"/>
+    <Resource Include="Fonts/Raleway-Medium.ttf"/>
+    <Resource Include="Fonts/Raleway-Regular.ttf"/>
+    <Resource Include="Fonts/Raleway-SemiBold.ttf"/>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />

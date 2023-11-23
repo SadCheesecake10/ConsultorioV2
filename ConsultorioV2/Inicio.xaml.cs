@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Npgsql;
 
 namespace ConsultorioV2
 {
@@ -25,6 +26,7 @@ namespace ConsultorioV2
         {
             InitializeComponent();
         }
+
         #region Prueba de tabla
         struct Cita
         {
@@ -62,7 +64,6 @@ namespace ConsultorioV2
         };
         #endregion
 
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             DispatcherTimer timer = new DispatcherTimer();
@@ -81,12 +82,45 @@ namespace ConsultorioV2
 
         private void LlenarTablaPrueba()
         {
+            listaCitas = listaCitas.OrderBy(cita => cita.Fecha).ThenBy(cita => cita.Hora).ToList();
             TablaCitas.ItemsSource = listaCitas;
         }
 
         private void TablaCitas_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+        
+        private void citas_de_Hoy()
+        {
+           List<Cita> citas = new List<Cita>();
+            try
+            {
+                string cadenaConexion = "Server=localhost;Port=5432;User Id=postgres;Password=1234;Database=Consultorio";
+                NpgsqlConnection conexion = new NpgsqlConnection(cadenaConexion);
+                conexion.Open();
+                string sql = "SELECT Pacientes.Nombre, Pacientes.Apellido, Doctores.Nombre, Citas.Fecha, Citas.TipoCita\r\nFROM Relaciones\r\nINNER JOIN Pacientes ON Relaciones.PacienteId = Pacientes.Id\r\nINNER JOIN Doctores ON Relaciones.DoctorId = Doctores.Id\r\nINNER JOIN Citas ON Relaciones.CitaId = Citas.Id;";
+                NpgsqlCommand comando = new NpgsqlCommand(sql, conexion);
+                comando.Parameters.AddWithValue("@fecha", DateTime.Now.ToString("dd-MMM-yy"));
+                NpgsqlDataReader reader = comando.ExecuteReader();
+                while (reader.Read())
+                {
+                    Cita cita = new Cita();
+                    cita.Nombre = reader.GetString(1);
+                    cita.Apellido = reader.GetString(2);
+                    cita.Motivo = reader.GetString(3);
+                    cita.Hora = reader.GetString(4);
+                    cita.Fecha = reader.GetString(5);
+                    cita.Doctor = reader.GetString(6);
+                    citas.Add(cita);
+                }
+                conexion.Close();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            TablaCitas.ItemsSource = citas;
         }
     }
 }
