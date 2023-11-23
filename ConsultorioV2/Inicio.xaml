@@ -12,7 +12,7 @@
         <Grid Background="White">
             <TextBlock HorizontalAlignment="Center" Margin="0,10,0,0" TextWrapping="Wrap" Text="BIENVENIDO" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" FontSize="72" TextAlignment="Center" Width="793"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,101,0,0" TextWrapping="Wrap" Text="Citas de hoy:" VerticalAlignment="Top" FontFamily="Yu Gothic UI Semibold" Width="792" FontSize="48"/>
-            <DataGrid x:Name="TablaCitas" AutoGenerateColumns="False" Margin="10,170,10,89" FontSize="20" FontFamily="Yu Gothic UI" Width="770" Height="220">
+            <DataGrid x:Name="TablaCitas" AutoGenerateColumns="False" Margin="10,170,10,89" FontSize="16" FontFamily="Yu Gothic UI" Width="770" Height="220" IsReadOnly="True" SelectionChanged="TablaCitas_SelectionChanged">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Nombre" Binding="{Binding Nombre}" />
                     <DataGridTextColumn Header="Apellido" Binding="{Binding Apellido}" />
