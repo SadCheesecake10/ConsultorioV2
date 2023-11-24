@@ -33,7 +33,7 @@ namespace ConsultorioV2
             Mouse.OverrideCursor = Cursors.Hand;
             if (sender is TextBlock txtNombre)
             {
-                Color_Rectangulos(txtNombre, Color.FromRgb(0, 200, 200));
+                Color_Rectangulos(txtNombre, Color.FromRgb(221, 242, 253), Color.FromRgb(66, 125, 157));
             }
         }
 
@@ -42,7 +42,7 @@ namespace ConsultorioV2
             Mouse.OverrideCursor = null;
             if (sender is TextBlock txtNombre)
             {
-                Color_Rectangulos(txtNombre, Color.FromRgb(0, 150, 200));
+                Color_Rectangulos(txtNombre, Color.FromRgb(66, 125, 157), Color.FromRgb(221,242,253));
             }
         }
 
@@ -50,39 +50,39 @@ namespace ConsultorioV2
         {
             if (sender is TextBlock txtNombre)
             {
+                Presentacion presentacion = new Presentacion();
                 switch (txtNombre.Name)
                 {
                     case "txt_Inicio":
                         Rec_Pagina.NavigationService.Navigate(new Uri("Inicio.xaml", UriKind.Relative));
                         break;
-                    case "txt_Pacientes":
-                        Rec_Pagina.NavigationService.Navigate(new Uri("Pacientes.xaml", UriKind.Relative));
-                        break;
-                    case "txt_Doctores":
-                        Rec_Pagina.NavigationService.Navigate(new Uri("Doctores.xaml", UriKind.Relative));
-                        break;
-                    case "txt_Citas":
-                        Rec_Pagina.NavigationService.Navigate(new Uri("Citas.xaml", UriKind.Relative));
-                        break;
+                    default:
+                        presentacion.cambiarContenido(txtNombre.Name);
+                        Rec_Pagina.NavigationService.Navigate(presentacion);
+                    break;
                 }
             }
         }
 
-        private void Color_Rectangulos(TextBlock txtNombre, Color color)
+        private void Color_Rectangulos(TextBlock txtNombre, Color rectangulo, Color letra)
         {
             switch (txtNombre.Name)
             {
                 case "txt_Inicio":
-                    Rec_Inicio.Fill = new SolidColorBrush(color);
+                    Rec_Inicio.Fill = new SolidColorBrush(rectangulo);
+                    txt_Inicio.Foreground = new SolidColorBrush(letra);
                     break;
                 case "txt_Pacientes":
-                    Rec_Pacientes.Fill = new SolidColorBrush(color);
+                    Rec_Pacientes.Fill = new SolidColorBrush(rectangulo);
+                    txt_Pacientes.Foreground = new SolidColorBrush(letra);
                     break;
                 case "txt_Doctores":
-                    Rec_Doctores.Fill = new SolidColorBrush(color);
+                    Rec_Doctores.Fill = new SolidColorBrush(rectangulo);
+                    txt_Doctores.Foreground = new SolidColorBrush(letra);
                     break;
                 case "txt_Citas":
-                    Rec_Citas.Fill = new SolidColorBrush(color);
+                    Rec_Citas.Fill = new SolidColorBrush(rectangulo);
+                    txt_Citas.Foreground = new SolidColorBrush(letra);
                     break;
             }
         }

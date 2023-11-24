@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ConsultorioV2"
         mc:Ignorable="d"
-        Title="Clinica" Height="497" Width="935" Icon="Imagenes/clinic.ico" Loaded="Window_Loaded">
+        Title="Clinica" Height="497" Width="935" Icon="Imagenes/clinic.ico" Loaded="Window_Loaded" Background="#DDF2FD">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto" />
@@ -14,15 +14,15 @@
         <Viewbox Stretch="Uniform" Grid.Column="0">
             <Grid>
                 <!-- Elementos columna izquierda -->
-                <Rectangle HorizontalAlignment="Left" Height="481" VerticalAlignment="Center" Width="244" Fill="#FF0096C8"/>
-                <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,103,0,0"/>
-                <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,111,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#FF0096C8" Margin="0,164,0,0"/>
-                <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,167,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Left" Height="58" Margin="0,218,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
-                <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,224,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Left" Height="58" Margin="0,282,0,0" VerticalAlignment="Top" Width="244" Fill="#FF0096C8"/>
-                <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,288,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#FFFDFDFD" FontFamily="Yu Gothic UI" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle HorizontalAlignment="Left" Height="481" VerticalAlignment="Center" Width="244" Fill="#427D9D"/>
+                <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,103,0,0"/>
+                <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,111,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,164,0,0"/>
+                <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,167,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Left" Height="58" Margin="0,218,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
+                <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,224,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Left" Height="58" Margin="0,282,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
+                <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,288,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
                 <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,169,0,0" VerticalAlignment="Top" Width="47">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Imagenes/user-injured.png"/>
@@ -46,10 +46,10 @@
             </Grid>
         </Viewbox>
 
-        <Viewbox Stretch="Uniform" Margin="4,0,1,0" Grid.Column="1">
+        <Viewbox Stretch="Uniform" Margin="4,0,1,0" Grid.Column="1" >
             <Grid>
                 <!-- Frame columna derecha -->
-                <TextBlock x:Name="Reloj" HorizontalAlignment="Center" Margin="0,458,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="762" FontFamily="Segoe UI Variable Display" FontSize="20" Background="{x:Null}" TextAlignment="Right" Cursor="AppStarting"/>
+                <TextBlock x:Name="Reloj" HorizontalAlignment="Center" Margin="0,458,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="762" FontFamily="Raleway SemiBold" FontSize="20" Background="{x:Null}" TextAlignment="Right" Cursor="AppStarting"/>
                 <Frame x:Name="Rec_Pagina" NavigationUIVisibility="Hidden" Margin="0,-23,0,-21"/>
             </Grid>
         </Viewbox>

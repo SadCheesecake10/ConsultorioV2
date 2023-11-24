@@ -122,21 +122,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Doctores.xaml">
+    <Page Include="Presentacion.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Citas.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Pacientes.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Inicio.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -153,17 +141,8 @@
     <Compile Include="Clases\Paciente.cs" />
     <Compile Include="Datos\Datos_Doctores.cs" />
     <Compile Include="Datos\Datos_Pacientes.cs" />
-    <Compile Include="Doctores.xaml.cs">
-      <DependentUpon>Doctores.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Citas.xaml.cs">
-      <DependentUpon>Citas.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Pacientes.xaml.cs">
-      <DependentUpon>Pacientes.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Inicio.xaml.cs">
-      <DependentUpon>Inicio.xaml</DependentUpon>
+    <Compile Include="Presentacion.xaml.cs">
+      <DependentUpon>Presentacion.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -218,16 +197,14 @@
   <ItemGroup>
     <Resource Include="Imagenes\clinic.ico" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Estilos\" />
+    <Resource Include="Imagenes\agregar.png" />
+    <Resource Include="Imagenes\editar.png" />
+    <Resource Include="Imagenes\eliminar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Fonts/Raleway-Black.ttf"/>
-    <Resource Include="Fonts/Raleway-Bold.ttf"/>
-    <Resource Include="Fonts/Raleway-ExtraBold.ttf"/>
-    <Resource Include="Fonts/Raleway-Medium.ttf"/>
-    <Resource Include="Fonts/Raleway-Regular.ttf"/>
-    <Resource Include="Fonts/Raleway-SemiBold.ttf"/>
+    <Resource Include="Imagenes\search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.4.9.0\build\MaterialDesignThemes.targets')" />
