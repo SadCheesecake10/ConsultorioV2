@@ -93,12 +93,12 @@ namespace ConsultorioV2
             timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
             timer.Start();
-            Reloj.Text = DateTime.Now.ToLongDateString();
+            Reloj.Text = DateTime.Now.ToShortTimeString();
         }
 
         private void Timer_Tick(object sender, EventArgs e)
         {
-            Reloj.Text = DateTime.Now.ToLongDateString();
+            Reloj.Text = DateTime.Now.ToShortTimeString();
         }
     }
 }

@@ -21,20 +21,35 @@
             </DataGrid.Columns>
         </DataGrid>
         <TextBox x:Name="BarraBusqueda" HorizontalAlignment="Left" Margin="54,78,0,0" TextWrapping="Wrap" Text="Buscar..." VerticalAlignment="Top" Width="658" Height="32" FontFamily="Raleway Medium" FontSize="20" SelectionOpacity="0.5" Foreground="#FF427D9D" Background="White" LostFocus="BarraBusqueda_LostFocus" GotFocus="BarraBusqueda_GotFocus"/>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="642,122,0,0" VerticalAlignment="Top" Width="32" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="Agregar" Content="Eliminar" HorizontalAlignment="Left" Margin="642,122,0,0" VerticalAlignment="Top" Width="32" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AbrirFormulario_ClickButton">
             <Button.Background>
                 <ImageBrush ImageSource="Imagenes/agregar.png"/>
             </Button.Background>
+            <Button.ToolTip>
+                <ToolTip>
+                    <TextBlock Text="Agregar" FontFamily="Raleway" FontSize="14" Foreground="#164863"/>
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
-        <Button Content="Editar" HorizontalAlignment="Left" Margin="679,123,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="31">
+        <Button Content="Editar" HorizontalAlignment="Left" Margin="679,123,0,0" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="31" Click="AbrirFormulario_ClickButton">
             <Button.Background>
                 <ImageBrush ImageSource="Imagenes/eliminar.png"/>
             </Button.Background>
+            <Button.ToolTip>
+                <ToolTip>
+                    <TextBlock Text="Eliminar" FontFamily="Raleway" FontSize="14" Foreground="#164863"/>
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
-        <Button Content="Eliminar" HorizontalAlignment="Left" Margin="715,122,0,0" VerticalAlignment="Top" Width="32" BorderBrush="{x:Null}" Foreground="{x:Null}">
+        <Button x:Name="Editar" Content="Eliminar" HorizontalAlignment="Left" Margin="715,122,0,0" VerticalAlignment="Top" Width="32" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="AbrirFormulario_ClickButton">
             <Button.Background>
                 <ImageBrush ImageSource="Imagenes/editar.png"/>
             </Button.Background>
+            <Button.ToolTip>
+                <ToolTip>
+                    <TextBlock Text="Editar" FontFamily="Raleway" FontSize="14" Foreground="#164863"/>
+                </ToolTip>
+            </Button.ToolTip>
         </Button>
         <Rectangle HorizontalAlignment="Left" Height="32" Margin="679,77,0,0" VerticalAlignment="Top" Width="32" Fill="#FF164863"/>
         <Rectangle HorizontalAlignment="Left" Height="30" Margin="680,78,0,0" VerticalAlignment="Top" Width="30">

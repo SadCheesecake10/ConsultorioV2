@@ -15,32 +15,37 @@
             <Grid>
                 <!-- Elementos columna izquierda -->
                 <Rectangle HorizontalAlignment="Left" Height="481" VerticalAlignment="Center" Width="244" Fill="#427D9D"/>
-                <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,103,0,0"/>
-                <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,111,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Left" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,164,0,0"/>
-                <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,167,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Left" Height="58" Margin="0,218,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
-                <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,224,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Left" Height="58" Margin="0,282,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
-                <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,288,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
-                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,169,0,0" VerticalAlignment="Top" Width="47">
+                <Rectangle x:Name="Rec_Inicio" HorizontalAlignment="Center" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,141,0,0"/>
+                <TextBlock x:Name="txt_Inicio" HorizontalAlignment="Left" Height="42" Margin="64,149,0,0" TextWrapping="Wrap" Text="Inicio" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Pacientes" HorizontalAlignment="Center" Height="58" VerticalAlignment="Top" Width="244" Fill="#427D9D" Margin="0,202,0,0"/>
+                <TextBlock x:Name="txt_Pacientes" HorizontalAlignment="Left" Height="42" Margin="62,205,0,0" TextWrapping="Wrap" Text="Pacientes" VerticalAlignment="Top" Width="172" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Doctores" HorizontalAlignment="Center" Height="58" Margin="0,256,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
+                <TextBlock x:Name="txt_Doctores" HorizontalAlignment="Left" Height="42" Margin="64,262,0,0" TextWrapping="Wrap" Text="Doctores" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle x:Name="Rec_Citas" HorizontalAlignment="Center" Height="58" Margin="0,320,0,0" VerticalAlignment="Top" Width="244" Fill="#427D9D"/>
+                <TextBlock x:Name="txt_Citas" HorizontalAlignment="Left" Height="42" Margin="64,326,0,0" TextWrapping="Wrap" Text="Citas" VerticalAlignment="Top" Width="170" Foreground="#DDF2FD" FontFamily="Raleway ExtraBold" FontSize="34" MouseEnter="TextBlock_MouseEnter" MouseLeave="TextBlock_MouseLeave" MouseLeftButtonDown="TextBlock_Click"/>
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,207,0,0" VerticalAlignment="Top" Width="47">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Imagenes/user-injured.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,222,0,0" VerticalAlignment="Top" Width="49">
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,260,0,0" VerticalAlignment="Top" Width="49">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Imagenes/user-md.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,286,0,0" VerticalAlignment="Top" Width="49">
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="10,324,0,0" VerticalAlignment="Top" Width="49">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Imagenes/calendar-day.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
-                <Rectangle HorizontalAlignment="Left" Height="47" Margin="11,109,0,0" VerticalAlignment="Top" Width="47">
+                <Rectangle HorizontalAlignment="Left" Height="47" Margin="11,147,0,0" VerticalAlignment="Top" Width="47">
                     <Rectangle.Fill>
                         <ImageBrush ImageSource="Imagenes/house-medical (1).png"/>
+                    </Rectangle.Fill>
+                </Rectangle>
+                <Rectangle x:Name="Rec_Inicio_Copy" HorizontalAlignment="Center" Height="126" VerticalAlignment="Top" Width="244" Margin="0,10,0,0">
+                    <Rectangle.Fill>
+                        <ImageBrush ImageSource="/Imagenes/centro médico.png"/>
                     </Rectangle.Fill>
                 </Rectangle>
             </Grid>

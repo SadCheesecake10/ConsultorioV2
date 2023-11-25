@@ -72,5 +72,23 @@ namespace ConsultorioV2
                     break;
             }
         }
+
+        private void AbrirFormulario_ClickButton(object sender, RoutedEventArgs e)
+        {
+            Formularios formulario = new Formularios();
+            switch (Titulo.Text)
+            {
+                case "Agenda de doctores":
+                    formulario.Titulo.Text = "Agregar doctor";
+                    formulario.ShowDialog();
+                    break;
+                case "Agenda de pacientes":
+                    formulario.Titulo.Text = "Agregar paciente";
+                    formulario.txtCedula.Visibility = Visibility.Collapsed;
+                    formulario.tf_Cedula.Visibility = Visibility.Collapsed;
+                    formulario.ShowDialog();
+                    break;
+            }
+        }
     }
 }
